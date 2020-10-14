@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/mainFragment1">
+
+    <fragment
+        android:id="@+id/mainFragment1"
+        android:name="com.yfsx.navigation.fragment.MainFragment1"
+        android:label="MainFragment1" >
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/mainFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_mainFragment1_to_mainFragment4"
+            app:destination="@id/mainFragment4"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment2"
+        android:name="com.yfsx.navigation.fragment.MainFragment2"
+        android:label="MainFragment2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment3"
+            app:destination="@id/mainFragment3"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment3"
+        android:name="com.yfsx.navigation.fragment.MainFragment3"
+        android:label="MainFragment3" />
+    <fragment
+        android:id="@+id/mainFragment4"
+        android:name="com.yfsx.navigation.fragment.MainFragment4"
+        android:label="MainFragment4" />
+</navigation>

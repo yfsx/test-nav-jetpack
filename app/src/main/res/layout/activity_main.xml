@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/separateLine"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/bottom_nav_graph"/>
+
+    <View
+        android:id="@+id/separateLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a9a9a9"
+        app:layout_constraintTop_toBottomOf="@id/fragmentContainer"
+        app:layout_constraintBottom_toTopOf="@+id/botNavLayout"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botNavLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/menu_main"/>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/botNavLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btn1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="fragment1"/>-->
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btn2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="fragment2"/>-->
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btn3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="fragment3"/>-->
+<!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
